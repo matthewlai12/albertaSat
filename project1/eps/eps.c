@@ -107,6 +107,15 @@ uint16_t EPS_BATT[EPS_SIZE];
 
 int main() {
   // initialize your threads and start the program
+  pthread_t thread1;
+  pthread_t thread2;
+  pthread_t thread3;
+
+  int id1 = 1;
+  int id2 = 2;
+  int id3 = 3;
+
+  pthread_create(&thread1, NULL, getValues, &id1);
   
   return 0;
 }
